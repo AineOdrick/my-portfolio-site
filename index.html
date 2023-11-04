@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aine Odrick</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!------------------header section---------------------------->
+    <div class="header-section">
+      <nav>
+        <div class="logo">
+          <h1><a href=""><span>O</span>DRICK.</a></h1>
+        </div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portifolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Web Developer</p>
+        <h1>Hi, I'm <span>Aine</span><br> Odrick from Uganda.</h1>
+      </div>
+    </div>
+
+    <!------------------------About----------------------->
+    <div class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="profile-pic">
+            <img src="images/profile pic.png" >
+          </div>
+          <div class="about-info">
+            <h1>About Me</h1>
+            <p>UI/UX design is one among numerous non-technical 
+              roles in tech that doesn't require any coding or 
+              programming skills. However, having previous 
+              experience in coding or programming skills is 
+              beneficial as communicating with developers 
+              is made easier</p>
+              <div class="tab-titles">
+                <span class="tab-links active-link" onclick="openTab('skills')">Skills</span>
+              <span class="tab-links" onclick="openTab('experience')">Experience</span>
+              <span class="tab-links" onclick="openTab('education')">Education</span>
+              </div>
+              <div class="tab-content active-tab" id="skills">
+                <ul>
+                  <li><span>Web Developer</span><br> Development of Interactive Websites</li>
+                  <li><span>App Developer</span><br>Mobile App Development</li>
+                  <li><span>Graphic Designer</span><br>Web App Development</li>
+                </ul>
+              </div>
+              <div class="tab-content" id="experience">
+                <ul>
+                  <li><span>2022 - Current</span><br>Software Development Training at ET
+                  institution</li>
+                  <li><span>2019 - 2021</span><br>Team lead at StarApp LLC</li>
+                  <li><span>2021- 2023</span><br>Graphics Design Executive at Travelogue Times LTD</li>
+                  <li><span>2020 - 2021</span><br>Internship at Lynx Media</li>
+    
+                </ul>
+              </div>
+              <div class="tab-content" id="education">
+                <ul>
+                  <li><span>2023</span><br>Software Development Training at ET
+                    institution</li>
+                  <li><span>2022</span><br>Kampala International University</li>
+                  <li><span>2019</span><br>St. Peters Senior Secondary School</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+const tabLinks = document.getElementsByClassName("tab-links");
+const tabContent = document.getElementsByClassName("tab-content");
+
+
+function openTab(tabname){
+  for(link of tabLinks){
+    link.classList.remove("active-link");
+  }
+  for(content of tabContent){
+    content.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+} 
+  </script>
+</body>
+</html>
