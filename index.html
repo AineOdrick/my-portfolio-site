@@ -15,11 +15,15 @@
         <div class="logo">
           <h1><a href=""><span>O</span>DRICK.</a></h1>
         </div>
-        <ul>
+        <div class="menu" onclick="controlSidebar('open')">
+          <img src="images/hamburger-menu.svg" alt="">
+        </div>
+        <ul id="side-bar">
           <li><a href="#about">About</a></li>
-          <li><a href="#portifolio">Portfolio</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
+          <div class="close" onclick="controlSidebar('close')">X</div>
         </ul>
       </nav>
       <div class="header-text">
@@ -77,9 +81,130 @@
         </div>
       </div>
     </div>
+
+    <!------------------------------Services-------------------------->
+    <div class="services" id="services">
+      <div class="container">
+        <h1>My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>A UI designer is responsible for creating 
+              beautiful and intuitive user interfaces. 
+              They design all the screens 
+              users navigate through in their journey.
+            </p>
+            <a href="">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>UI/UX Design</h2>
+            <p>A UI designer is responsible for creating 
+              beautiful and intuitive user interfaces. 
+              They design all the screens 
+              users navigate through in their journey.
+            </p>
+            <a href="">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>App Design</h2>
+            <p>A UI designer is responsible for creating 
+              beautiful and intuitive user interfaces. 
+              They design all the screens 
+              users navigate through in their journey.
+            </p>
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-------------------------------My Work-------------------------------->
+    <div class="portifolio" id="portfolio">
+      <div class="container">
+        <h1>My Work</h1>
+        <div class="work-list">
+          <div class="work-box">
+              <img src="images/work-1.png" alt="">
+            <div class="work-info">
+              <h3>Social Media App</h3>
+              <p>The app connects you yo talented people aroound the world. 
+                Download it from plat store
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work-box">
+              <img src="images/work-1.png" alt="">
+            <div class="work-info">
+              <h3>Social Media App</h3>
+              <p>The app connects you yo talented people aroound the world. 
+                Download it from plat store
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work-box">
+              <img src="images/work-1.png" alt="">
+            <div class="work-info">
+              <h3>Social Media App</h3>
+              <p>The app connects you yo talented people aroound the world. 
+                Download it from plat store
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="" class="btn">See More</a>
+      </div>
+    </div>
+
+
+    <!-----------------------contant-------------------------->
+    <div class="contact" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-info">
+            <h1>Contanct Me</h1>
+            <p class="tell">Tell: <span>+256-759-665-733<br>+256-786-645-551</span></p>
+            <p class="mail">odrickaine200@gmail.com</p>
+
+            <a href="images/Odricks CV 1.pdf" Download class="btn btn2">Download CV</a>
+          </div>
+          <form action="">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea name="" id="" rows="10" placeholder="Message....."></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!---------------------footer------------------------>
+    <div class="footer">
+      <p>Copyright © Odrick. Made with <i class="fa-solid fa-heart"></i> by Aine Odrick</p>
+    </div>
+
   </div>
 
+
   <script>
+//SideBar
+const sideBar = document.getElementById("side-bar");
+
+function controlSidebar(control){
+  if(control === 'open'){
+    sideBar.style.right = "0px";
+  }
+  else if(control === 'close'){
+    sideBar.style.right = "-300px";
+  }
+}
+
+//About
 const tabLinks = document.getElementsByClassName("tab-links");
 const tabContent = document.getElementsByClassName("tab-content");
 
